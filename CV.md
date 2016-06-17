@@ -4,6 +4,9 @@ title: CV & Resume
 permalink: /CV/
 ---
 
+you can [get the PDF]({{ site.url }}/pdfs/resume.pdf) directly.
+
+
 # Click the Github link below for pdfs and source code of my CV and resume.
 
 <center>GitHub Repository
