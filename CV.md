@@ -7,10 +7,10 @@ permalink: /CV/
 you can [get the PDF]({{ site.url }}/pdfs/resume.pdf) directly.
 
 
-# Click the Github link below for pdfs and source code of my CV and resume.
+<!-- # Click the Github link below for pdfs and source code of my CV and resume.
 
 <center>GitHub Repository
-<a href="https://github.com/tylerhether/CV"><p><i class="fa fa-github"></i></p></a>
+<a href="https://github.com/tylerhether/CV"><p><i class="fa fa-github"></i></p></a> -->
 
 <!-- <div class="intro"><br>
   <p>
