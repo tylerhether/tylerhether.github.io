@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<p><a href="http://www.w3schools.com/html/">Visit our HTML tutorial</a></p>
-
-</body>
-</html>

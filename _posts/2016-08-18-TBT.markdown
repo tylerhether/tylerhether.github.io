@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Landscape Genetics in a Frog"
+date:   2016-08-18 20:00:31 +0530
+categories: ["frogs", "landscape genetics", "population genetics", "throwback Thursday"]
+author: "Tyler Hether"
+---
+
+For this throwback Thursday I'm linking [*this BEACON blog post*](https://www3.beacon-center.org/blog/2012/04/10/beacon-researchers-at-work-effect-of-landscapes-and-ecology-on-gene-flow-and-speciation/) from 2012. It summarizes some of the work I did using [*Machine Learning*](https://en.wikipedia.org/wiki/Random_forest) and landscape genetics to find habitat correlates of genetic structure in the squirrel treefrog (_Hyla squirella_).
