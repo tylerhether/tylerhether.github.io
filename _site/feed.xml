@@ -5,15 +5,15 @@
     <description>computational biologist | outdoor enthusiast</description>
     <link>http://tylerhether.github.io/</link>
     <atom:link href="http://tylerhether.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Sep 2016 16:54:21 -0700</pubDate>
-    <lastBuildDate>Wed, 14 Sep 2016 16:54:21 -0700</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 16:57:52 -0700</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 16:57:52 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Real-time Analytics</title>
         <description>&lt;p&gt;Humans are consumers of data. Such data can come in many forms: social media interactions; fitness tracker output like heartbeat, cadence, calories burned, and miles jogged; and larger datasets like web traffic output and DNA sequences. Regardless of the type of data, real-time visualization of essential information can be a challenging but necessary product that can provide quick feedback to the user.&lt;/p&gt;
 
-&lt;p&gt;In an effort to run analytics on my running applications or scripts, I started using &lt;a href=&quot;https://www.datadoghq.com/&quot;&gt;&lt;em&gt;Datadog&lt;/em&gt;&lt;/a&gt;. With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value ‘counter.counter0’ every time the function ‘count_something’ is called.&lt;/p&gt;
+&lt;p&gt;In an effort to run analytics on my running applications or scripts, I started using &lt;a href=&quot;https://www.datadoghq.com/&quot;&gt;&lt;em&gt;Datadog&lt;/em&gt;&lt;/a&gt;. With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value ‘counter.counter0’ every time the function ‘count_something’ is called!&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from dogstatsd import statsd
 
