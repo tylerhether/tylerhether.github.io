@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Real-time Analytics"
+date:   2016-08-18 20:00:31 +0530
+categories: ["big data", "consuming data", "real-time analytics"]
+author: "Tyler Hether"
+---
+
+Humans are consumers of data. Such data can come in many forms: social media interactions; fitness tracker output like heartbeat, cadence, calories burned, and miles jogged; and larger datasets like web traffic output and DNA sequences. Regardless of the type of data, real-time visualization of essential information can be a challenging but necessary product that can provide quick feedback to the user.
+
+In an effort to run analytics on my running applications or scripts, I started using [*Datadog*](https://www.datadoghq.com/). With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value 'counter.counter0' every time the function 'count_something' is called.
+
+
+```
+from dogstatsd import statsd
+
+def count_something():
+    """ Count something """
+    statsd.increment('counter.counter0')
+    return 'foo bar'
+
+for i in xrange(0,10000000):
+    count_something()
+
+```
+
+While that for loop is running, Datadog can create and update plots like the upper left panel of the figure below to track, for instance, the average times the function has been called per minute.
+
+<p align="center">
+  <img src="/pdfs/datadogtest.png" alt=""/>
+</p>
+<center>
+<i> Custom analytics like the one in the upper left can be viewed along with built-in metrics. </i>
+<br> <br>
+</center>
+
+Of course, I've only begun using Datadog in my daily routine and there is much much more functionality that I haven't yet incorporated. Nevertheless, I've already started making performance enhancements based on such real-time data visualizations.
