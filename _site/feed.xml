@@ -5,9 +5,51 @@
     <description>computational biologist | outdoor enthusiast</description>
     <link>http://tylerhether.github.io/</link>
     <atom:link href="http://tylerhether.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Aug 2016 16:17:09 -0700</pubDate>
-    <lastBuildDate>Wed, 24 Aug 2016 16:17:09 -0700</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 17:07:16 -0700</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 17:07:16 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Real-time Analytics</title>
+        <description>&lt;p&gt;Humans are consumers of data. Such data can come in many forms: social media interactions; fitness tracker output like heartbeat, cadence, calories burned, and miles jogged; and larger datasets like web traffic output and DNA sequences. Regardless of the type of data, real-time visualization of essential information can be a challenging but necessary product that can provide quick feedback to the user.&lt;/p&gt;
+
+&lt;p&gt;In an effort to run analytics on my running applications or scripts, I started using &lt;a href=&quot;https://www.datadoghq.com/&quot;&gt;&lt;em&gt;Datadog&lt;/em&gt;&lt;/a&gt;. With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value ‘counter.counter0’ every time the function ‘count_something’ is called.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from dogstatsd import statsd
+
+def count_something():
+    &quot;&quot;&quot; Count something &quot;&quot;&quot;
+    statsd.increment('counter.counter0')
+    return 'foo bar'
+
+for i in xrange(0,10000000):
+    count_something()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;While that for loop is running, Datadog can create and update plots like the upper left panel of the figure below to track, for instance, the average times the function has been called per minute.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+  &lt;img src=&quot;/pdfs/datadogtest.png&quot; alt=&quot;&quot; /&gt;
+&lt;/p&gt;
+&lt;center&gt;
+&lt;i&gt; Custom analytics like the one in the upper left can be viewed along with built-in metrics. &lt;/i&gt;
+&lt;br /&gt; &lt;br /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Of course, I’ve only begun using Datadog in my daily routine and there is much much more functionality that I haven’t yet incorporated. Nevertheless, I’ve already started making performance enhancements based on such real-time data visualizations.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Aug 2016 07:30:31 -0700</pubDate>
+        <link>http://tylerhether.github.io/data/analytics/2016/08/18/data.html</link>
+        <guid isPermaLink="true">http://tylerhether.github.io/data/analytics/2016/08/18/data.html</guid>
+        
+        
+        <category>data</category>
+        
+        <category>analytics</category>
+        
+      </item>
     
       <item>
         <title>Landscape Genetics in a Frog</title>
