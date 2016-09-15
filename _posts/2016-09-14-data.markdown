@@ -8,7 +8,7 @@ author: "Tyler Hether"
 
 Humans are consumers of data. Such data can come in many forms: social media interactions; fitness tracker output like heartbeat, cadence, calories burned, and miles jogged; and larger datasets like web traffic output and DNA sequences. Regardless of the type of data, real-time visualization of essential information can be a challenging but necessary product that can provide quick feedback to the user.
 
-In an effort to run analytics on my running applications or scripts, I started using [*Datadog*](https://www.datadoghq.com/). With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value 'counter.counter0' every time the function 'count_something' is called.
+In an effort to run analytics on my running applications or scripts, I started using [*Datadog*](https://www.datadoghq.com/). With just a few lines of code, one can get real-time updates of performance. For example, the simple python function below increments the value 'counter.counter0' every time the function 'count_something' is called!!
 
 
 ```
