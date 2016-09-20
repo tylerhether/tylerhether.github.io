@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Real-time Analytics"
-date:   2016-08-18 20:00:31 +0530
+date:   2016-09-14 20:00:31 +0530
 categories: ["data", "analytics"]
 author: "Tyler Hether"
 ---
