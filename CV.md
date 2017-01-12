@@ -1,10 +1,10 @@
 ---
 layout: page
-title: CV & Resume
+title: Resume
 permalink: /CV/
 ---
 
-Here are pdfs of my [CV]({{ site.url }}/pdfs/cv-TylerHether.pdf) and [resume]({{ site.url }}/pdfs/resume.pdf).
+Here is a pdf of my [resume]({{ site.url }}/pdfs/resume.pdf){:target="_blank"}.
 
 Source code for these can be found on my Github site or by clicking the link below.
 
