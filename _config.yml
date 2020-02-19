@@ -8,7 +8,7 @@
 # Site settings
 title: tyler hether
 email: tyler.hether [at] gmail <dot> com
-description: bioinformatician | outdoor enthusiast
+description: data scientist | family bike and outdoor enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tylerhether.github.io" # the base hostname & protocol for your site
 twitter_username: TylerHether
