@@ -313,7 +313,7 @@ beta1^2 - 4*gamma1
 ## [1] -0.4722222
 ```
 
-This result is analogous to that zen coworker you know. In this situation, some event occurred that knocked them off their internal equilibrium by decreasing work productivity. Following that event, their wellbeing increased which, in turn, allowed their work productivity to also increase. That increase to some maximum and then there was a back and forth. Importantly, that back and forth is continually dampened until reaching an equilibrium. Keep in mind that actually reaching the equilibrium wasn't the point here. The b_ehavior_ of dampening down work/life towards a steady-state was one of the things I was looking for in a work/life balance model.
+This result is analogous to that zen coworker you know. In this situation, some event occurred that knocked them off their internal equilibrium by decreasing work productivity. Following that event, their wellbeing increased which, in turn, allowed their work productivity to also increase. That increase to some maximum and then there was a back and forth. Importantly, that back and forth is continually dampened until reaching an equilibrium. Keep in mind that actually reaching the equilibrium wasn't the point here. The _behavior_ of dampening down work/life towards a steady-state was one of the things I was looking for in a work/life balance model.
 
 ## A deeper dive
 So how do we get some cases where there are orbits and other cases where there are spiraling back towards an equilibrium?
@@ -343,7 +343,7 @@ So there are three conditions:
 
 
 ## So what does this model tell us?
-By now you should now that this is just a model and doesn't necessarily reflect real, stochastic life. That meaning said, there's on thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.
+By now you should know that this is just a model and doesn't necessarily reflect real, stochastic life. That meaning said, there's on thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.
 
 How to achieve zen-like work/life balance? From this model, either 1) reducing the set point of your wellbeing (i.e., being happy with less) or 2) reduce the degree to which work pressures affect your wellbeing or 3) a combination of 1 and 2 are key. Those are no small changes and I recommend the reader to work/life balance books for instruction.
 
