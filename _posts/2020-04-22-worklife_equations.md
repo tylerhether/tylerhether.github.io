@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Solving for work/life balance
+date:   2029-04-22 23:00:31 +0530
 subtitle: Modeling the dynamics of work/life
 tags: [R, RStudio, Jekyll, Github, Markdown, work/life]
 ---
