@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Solving for work/life balance</title>
-  <meta name="description" content="output:  html_document:    keep_md: true—">
+  <meta name="description" content="MotivationIt’s April 2020 and the world has come to a grinding halt with Covid-19. In hindsight, I think we saw this coming (I’m looking back at SARS and MER...">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,200,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
@@ -74,19 +74,13 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/2020/04/22/worklife_equations.html">Solving for work/life balance</a></h1>
-  <center>  <p class="post-meta"><time datetime="2020-04-22T00:00:00-07:00" itemprop="datePublished">Apr 22, 2020</time></p>
+  <center>  <p class="post-meta"><time datetime="2020-04-22T10:30:31-07:00" itemprop="datePublished">Apr 22, 2020</time></p>
     
    </center>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <hr />
-<p>output:
-  html_document:
-    keep_md: true
-—</p>
-
-<h2 id="motivation">Motivation</h2>
+    <h2 id="motivation">Motivation</h2>
 <p>It’s April 2020 and the world has come to a grinding halt with Covid-19. In hindsight, I think we saw this coming (I’m looking back at SARS and MERS). The silver lining of this tragedy–in my humble opinion–is how open scientists and physicians are at sharing what they learn and how the community as a whole is working together to come up with a solution – at least for the moment. Covid-19 is not the main subject of this post, <em>per se</em>, because there are plenty of other researchers doing great science. So what am I going to talk about? Well, this pandemic actually brings up something that is affecting a lot of us: work/life balance.</p>
 
 <p>One of the most effective things we have in our tiny arsenal against spreading SARS-CoV-2 is social isolation so, those who can, are working from home. Here, the balance of work pressures and life pressures has been off-kilter. Normally, working from home for me is a mix of working at my little home office or the corner coffee shop or library by my house. In either case, kids are not a problem because of the nanny and school. But in April 2020, the schools are closed, the library is closed, the nanny is quarantined following an ER visit (unrelated), and I honestly don’t think that coffee shop will ever reopen after this hit. Yikes!</p>
@@ -101,7 +95,7 @@
 <p>Let’s consider <script type="math/tex">x</script> to be proportional to one’s wellbeing and let <script type="math/tex">y</script> be proportional to their work productivity. A system of differential equations for the change of <script type="math/tex">x</script> and <script type="math/tex">y</script> across time might look like this:</p>
 
 <script type="math/tex; mode=display">\begin{matrix}
-\frac{dx}{dt}= x (1 - \frac{x}{K}) - \frac{x y}{x + \theta} \\ 
+\frac{dx}{dt}= x (1 - \frac{x}{K}) - \frac{x y}{x + \theta} \\
 \frac{dy}{dt}= \frac{x y}{x + \theta} - \frac{1}{4} y
 \end{matrix}</script>
 
@@ -121,10 +115,10 @@
 </span><span class="p">})</span><span class="w">
 </span><span class="n">dat</span><span class="o">$</span><span class="n">theta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">dat</span><span class="o">$</span><span class="n">theta</span><span class="p">)</span><span class="w">
 
-</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">theta</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-     </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">colour</span><span class="o">=</span><span class="n">theta</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-     </span><span class="n">theme_light</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-     </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Change in wellbeing from the interaction term"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="o">=</span><span class="n">theta</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+     </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">colour</span><span class="o">=</span><span class="n">theta</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+     </span><span class="n">theme_light</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+     </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Change in wellbeing from the interaction term"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
      </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Wellbeing (X) when holding Y to 100"</span><span class="p">)</span><span class="w">
 </span></code></pre>
 </div>
@@ -195,11 +189,11 @@ x<K %]]></script>. This should make sense: in the absence of <script type="math/
 
 <p><script type="math/tex">% <![CDATA[
 J(x,y) = \begin{bmatrix}
-\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\ 
+\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\
 \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y}
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
--\frac{2 x}{K} - \frac{\theta y}{(\theta + x)^2} + 1 &  -\frac{x}{\theta + x}\\ 
+-\frac{2 x}{K} - \frac{\theta y}{(\theta + x)^2} + 1 &  -\frac{x}{\theta + x}\\
 \frac{\theta y}{(\theta + x)^2} & \frac{x}{\theta + x} - \frac{1}{4}
 \end{bmatrix} %]]></script>.</p>
 
@@ -229,9 +223,9 @@ J(x,y) = \begin{bmatrix}
 </div>
 
 <p>So for point [x=30, y=0] mentioned above with parameters <script type="math/tex">\theta=10</script> and <script type="math/tex">K=30</script>, <script type="math/tex">% <![CDATA[
-J(30,0) = 
+J(30,0) =
 \begin{bmatrix}
--1 & -\frac{3}{4} \\ 
+-1 & -\frac{3}{4} \\
 0 & \frac{1}{2}
 \end{bmatrix} %]]></script>. The trace of this is negative (<script type="math/tex">\beta=-\frac{1}{2}</script>) but the determinate is also negative (<script type="math/tex">\gamma=-\frac{1}{2}</script>); thus, the equalibrium point [30,0] is not stable for this model and for these parameters (it’s a saddle).</p>
 
@@ -277,25 +271,25 @@ J(30,0) =
 <div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">plot_df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">DF</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p">){</span><span class="w">
      </span><span class="n">require</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
      </span><span class="n">require</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
-     
+
      </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="nf">max</span><span class="p">(</span><span class="n">DF</span><span class="o">$</span><span class="n">X</span><span class="o">*</span><span class="m">1.5</span><span class="p">),</span><span class="w"> </span><span class="n">length.out</span><span class="o">=</span><span class="m">200</span><span class="p">)</span><span class="w">
      </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">((</span><span class="n">parms</span><span class="p">[</span><span class="s2">"K"</span><span class="p">]</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">parms</span><span class="p">[</span><span class="s2">"theta"</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">parms</span><span class="p">[</span><span class="s2">"K"</span><span class="p">])</span><span class="w">
      </span><span class="n">df2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">filter</span><span class="p">(</span><span class="n">y</span><span class="o">&gt;=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">&gt;=</span><span class="m">0</span><span class="p">)</span><span class="w">
-     
-     
-     </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">DF</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+
+
+     </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">DF</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
           </span><span class="n">geom_path</span><span class="p">(</span><span class="n">arrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrow</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"open"</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unit</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="s2">"inches"</span><span class="p">)))</span><span class="w"> </span><span class="o">+</span><span class="w">
-          </span><span class="n">theme_light</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-          </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Wellbeing"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Work Productivity"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
-          </span><span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">DF</span><span class="p">[</span><span class="s2">"X"</span><span class="p">])))))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+          </span><span class="n">theme_light</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w">
+          </span><span class="n">xlab</span><span class="p">(</span><span class="s2">"Wellbeing"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Work Productivity"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+          </span><span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">DF</span><span class="p">[</span><span class="s2">"X"</span><span class="p">])))))</span><span class="w"> </span><span class="o">+</span><span class="w">
           </span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="m">1.2</span><span class="o">*</span><span class="n">DF</span><span class="p">[</span><span class="s2">"Y"</span><span class="p">])))))</span><span class="w">
-     
+
      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_path</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df2</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">),</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s2">"dotdash"</span><span class="p">)</span><span class="w">
      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s2">"dotdash"</span><span class="p">)</span><span class="w">
-     
+
      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parms</span><span class="p">[</span><span class="s2">"theta"</span><span class="p">]</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s1">'dashed'</span><span class="p">)</span><span class="w">
      </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="s1">'dashed'</span><span class="p">)</span><span class="w">
- 
+
      </span><span class="nf">return</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -420,7 +414,6 @@ J(30,0) =
 <p>Equations weren’t necessary to say that happier individuals are more productive, of course. Having good work/life balance depends on 1) the set of things that make one happy and 2) the set of work pressures needed to achieve that wellbeing set-point. Here I tried to model that with the <script type="math/tex">K</script> and <script type="math/tex">\theta</script> parameters, respectively. This model makes the assumption that wellbeing is a fixed point and irrelevant to work, which might not reflect reality. For example, another model could include two set points (<script type="math/tex">K_1</script> and <script type="math/tex">K_2</script>, perhaps) in which the contributions of work inherently increase wellbeing. This new model may behave more like mutualism models in ecology. That may be a topic for another post. We’ll see how long we’re in lock-down.</p>
 
 <p>Be safe out there.</p>
-
 
   </div>
 

@@ -2,9 +2,9 @@
 layout: post
 title: Solving for work/life balance
 subtitle: Modeling the dynamics of work/life
+date:   2020-04-22 23:00:31 +0530
 tags: [R, RStudio, Jekyll, Github, Markdown, work/life]
 ---
-
 
 ## Motivation
 It's April 2020 and the world has come to a grinding halt with Covid-19. In hindsight, I think we saw this coming (I'm looking back at SARS and MERS). The silver lining of this tragedy--in my humble opinion--is how open scientists and physicians are at sharing what they learn and how the community as a whole is working together to come up with a solution -- at least for the moment. Covid-19 is not the main subject of this post, _per se_, because there are plenty of other researchers doing great science. So what am I going to talk about? Well, this pandemic actually brings up something that is affecting a lot of us: work/life balance.
