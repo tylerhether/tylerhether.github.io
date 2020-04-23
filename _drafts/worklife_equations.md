@@ -161,10 +161,7 @@ det <- function(x, y, theta, K){
 ```
 
 
-So for point [x=30, y=0] mentioned above with parameters $$\theta=10$$ and $$K=30$$, $$J(30,0) = \begin{bmatrix}
-30*(-\frac{1}{15}) + 1 & -120 \\ 
-\frac{0}{(40)^2} & \frac{30}{40} - \frac{1}{4}
-\end{bmatrix} = 
+So for point [x=30, y=0] mentioned above with parameters $$\theta=10$$ and $$K=30$$, $$J(30,0) = 
 \begin{bmatrix}
 -1 & -\frac{3}{4} \\ 
 0 & \frac{1}{2}
@@ -324,7 +321,7 @@ This result is analogous to that zen coworker you know. In this situation, some 
 ## A deeper dive
 So how do we get some cases where there are orbits and other cases where there are spiraling back towards an equilibrium? 
 
-If you look at that x-isocline that curves, you can see a difference between the above two plots above. The y-isocline $$\frac{\theta}{3}$$ is to on the incline of the curve in the first plot but is on the decline of the curve on the second plot. Let's take a deeper look to see if the y-isocline position can tell us the trajectory behavior.
+If you look at that x-isocline that curves, you can see a difference between the above two plots above. The y-isocline $$\frac{\theta}{3}$$ is located on the incline of the curve in the first plot but is on the decline of the curve on the second plot. Let's take a deeper look to see if the y-isocline position can tell us the trajectory behavior.
 
 Taking the derivitative of the curved x-isocline we can identify the maximum point. So the x-isocline is: 
 
@@ -349,7 +346,7 @@ So there are three conditions:
 
 
 ## So what does this model tell us?
-By now you should now that this is just a model and doesn't necessarily reflect real, stochastic life. That meaning said, there's on thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.
+By now you should now that this is just a model and doesn't necessarily reflect real, stochastic life. That being said, there's one thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.
 
 How to achieve zen-like work/life balance? From this model, either 1) reducing the set point of your wellbeing (i.e., being happy with less) or 2) reduce the degree to which work pressures affect your wellbeing or 3) a combination of 1 and 2 are key. Those are no small changes and I recommend the reader to work/life balance books for instruction.
 

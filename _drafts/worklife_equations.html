@@ -475,10 +475,7 @@ det &lt;- function(x, y, theta, K){
   out &lt;- aa(x, y, theta, K)*dd(x, y, theta, K) - bb(x, y, theta, K)*cc(x, y, theta, K)
      return(out)
 }</code></pre>
-<p>So for point [x=30, y=0] mentioned above with parameters <span class="math display">\[\theta=10\]</span> and <span class="math display">\[K=30\]</span>, <span class="math display">\[J(30,0) = \begin{bmatrix}
-30*(-\frac{1}{15}) + 1 &amp; -120 \\ 
-\frac{0}{(40)^2} &amp; \frac{30}{40} - \frac{1}{4}
-\end{bmatrix} = 
+<p>So for point [x=30, y=0] mentioned above with parameters <span class="math display">\[\theta=10\]</span> and <span class="math display">\[K=30\]</span>, <span class="math display">\[J(30,0) = 
 \begin{bmatrix}
 -1 &amp; -\frac{3}{4} \\ 
 0 &amp; \frac{1}{2}
@@ -572,7 +569,7 @@ gamma1</code></pre>
 <div id="a-deeper-dive" class="section level2">
 <h2>A deeper dive</h2>
 <p>So how do we get some cases where there are orbits and other cases where there are spiraling back towards an equilibrium?</p>
-<p>If you look at that x-isocline that curves, you can see a difference between the above two plots above. The y-isocline <span class="math display">\[\frac{\theta}{3}\]</span> is to on the incline of the curve in the first plot but is on the decline of the curve on the second plot. Let’s take a deeper look to see if the y-isocline position can tell us the trajectory behavior.</p>
+<p>If you look at that x-isocline that curves, you can see a difference between the above two plots above. The y-isocline <span class="math display">\[\frac{\theta}{3}\]</span> is located on the incline of the curve in the first plot but is on the decline of the curve on the second plot. Let’s take a deeper look to see if the y-isocline position can tell us the trajectory behavior.</p>
 <p>Taking the derivitative of the curved x-isocline we can identify the maximum point. So the x-isocline is:</p>
 <p><span class="math display">\[y = \frac{(K-x)(\theta + x)}{K}\]</span></p>
 <p>and the derivative is:</p>
@@ -588,7 +585,7 @@ gamma1</code></pre>
 </div>
 <div id="so-what-does-this-model-tell-us" class="section level2">
 <h2>So what does this model tell us?</h2>
-<p>By now you should now that this is just a model and doesn’t necessarily reflect real, stochastic life. That meaning said, there’s on thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.</p>
+<p>By now you should now that this is just a model and doesn’t necessarily reflect real, stochastic life. That being said, there’s one thing I wanted a model to capture. That is, why some individuals seem to bounce right back from minor perturbations while others seem to be in a constant struggle with work and life vying for their time.</p>
 <p>How to achieve zen-like work/life balance? From this model, either 1) reducing the set point of your wellbeing (i.e., being happy with less) or 2) reduce the degree to which work pressures affect your wellbeing or 3) a combination of 1 and 2 are key. Those are no small changes and I recommend the reader to work/life balance books for instruction.</p>
 <p>Equations weren’t necessary to say that happier individuals are more productive, of course. Having good work/life balance depends on 1) the set of things that make one happy and 2) the set of work pressures needed to achieve that wellbeing set-point. Here I tried to model that with the <span class="math display">\[K\]</span> and <span class="math display">\[\theta\]</span> parameters, respectively. This model makes the assumption that wellbeing is a fixed point and irrelevant to work, which might not reflect reality. For example, another model could include two set points (<span class="math display">\[K_1\]</span> and <span class="math display">\[K_2\]</span>, perhaps) in which the contributions of work inherently increase wellbeing. This new model may behave more like mutualism models in ecology. That may be a topic for another post. We’ll see how long we’re in lock-down.</p>
 <p>Be safe out there.</p>
