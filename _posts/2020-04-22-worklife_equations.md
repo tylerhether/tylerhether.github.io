@@ -4,12 +4,6 @@ title: Solving for work/life balance
 subtitle: Modeling the dynamics of work/life
 tags: [R, RStudio, Jekyll, Github, Markdown, work/life]
 ---
----
-output:
-  html_document:
-    keep_md: true
----
-
 
 
 ## Motivation
@@ -17,18 +11,18 @@ It's April 2020 and the world has come to a grinding halt with Covid-19. In hind
 
 One of the most effective things we have in our tiny arsenal against spreading SARS-CoV-2 is social isolation so, those who can, are working from home. Here, the balance of work pressures and life pressures has been off-kilter. Normally, working from home for me is a mix of working at my little home office or the corner coffee shop or library by my house. In either case, kids are not a problem because of the nanny and school. But in April 2020, the schools are closed, the library is closed, the nanny is quarantined following an ER visit (unrelated), and I honestly don't think that coffee shop will ever reopen after this hit. Yikes!
 
-Life is, of course, stochastic. There are many different factors at play and some are just random or dumb luck. Nevertheless, I thought it would be a fun exercise to model how one's wellbeing can positively contribute to work and how work, in turn, might influence someone's wellbeing (e.g., a paycheck, contributing to a worthy cause). However, there is only so much work that one can do before it starts to affect life. 
+Life is, of course, stochastic. There are many different factors at play and some are just random or dumb luck. Nevertheless, I thought it would be a fun exercise to model how one's wellbeing can positively contribute to work and how work, in turn, might influence someone's wellbeing (e.g., a paycheck, contributing to a worthy cause). However, there is only so much work that one can do before it starts to affect life.
 
 So there's feedback here but how exactly work and life feed into each other seem to be different for every person. For example, do you know some people who seem to roll with every punch? Little disturbances seem to just bounce off them and the quickly find themselves right back at their steady-state. For others, disturbances can really throw off things and they find themselves spiraling and having trouble balancing between different work and life pressures under a fixed time interval.
 
-While this is a fun exercise I did while sitting at home under the stay-at-home order, my hope is that this model might train some intuition about bouncing back from big work or life events. So here we go. 
+While this is a fun exercise I did while sitting at home under the stay-at-home order, my hope is that this model might train some intuition about bouncing back from big work or life events. So here we go.
 
 ## The model
 Let's consider $$x$$ to be proportional to one's wellbeing and let $$y$$ be proportional to their work productivity. A system of differential equations for the change of $$x$$ and $$y$$ across time might look like this:
 
 $$
 \begin{matrix}
-\frac{dx}{dt}= x (1 - \frac{x}{K}) - \frac{x y}{x + \theta} \\ 
+\frac{dx}{dt}= x (1 - \frac{x}{K}) - \frac{x y}{x + \theta} \\
 \frac{dy}{dt}= \frac{x y}{x + \theta} - \frac{1}{4} y
 \end{matrix}
 $$
@@ -52,10 +46,10 @@ dat$response <- apply(dat, 1, function(a){
 })
 dat$theta <- as.factor(dat$theta)
 
-ggplot(data=dat, aes(x=x, y=response, group=theta)) + 
-     geom_line(aes(colour=theta)) + 
-     theme_light() + 
-     ylab("Change in wellbeing from the interaction term") + 
+ggplot(data=dat, aes(x=x, y=response, group=theta)) +
+     geom_line(aes(colour=theta)) +
+     theme_light() +
+     ylab("Change in wellbeing from the interaction term") +
      xlab("Wellbeing (X) when holding Y to 100")
 ```
 
@@ -88,7 +82,7 @@ abline(v=0, lty="dotdash", col="red")
 
 These are locations where the work/life balance trajectories only go into the vertical position (up and down).
 
-For the y-isoclines, we get one horizontal line ($$y=0$$) and one vertical line ($$x=\frac{\theta}{3}$$). These are the locations where work/life trajectories only go into the horizontal position (left and right). 
+For the y-isoclines, we get one horizontal line ($$y=0$$) and one vertical line ($$x=\frac{\theta}{3}$$). These are the locations where work/life trajectories only go into the horizontal position (left and right).
 
 
 ```r
@@ -99,7 +93,7 @@ abline(h=0, lty="dashed", col="blue")
 
 ![]({{site_url}}/img/blog_images/worklife_equations_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-And putting these all together and picking some values of $$\theta$$ (10) and $$K$$ (30), we get all the isoclines: 
+And putting these all together and picking some values of $$\theta$$ (10) and $$K$$ (30), we get all the isoclines:
 
 
 ```r
@@ -121,17 +115,17 @@ points(x=k, y=0)
 
 ![]({{site_url}}/img/blog_images/worklife_equations_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
-So there are (up to) three equilibria (i.e., up to one internal equilibrium). Each line segment above has either 1) an up or down (red) or 2) a left or right (blue) direction. Looking at the change along each segment can reveal the direction. For example, for the y-isocline $$y=0$$, we can evaluate the instantaneous change of the wellbeing equation at various points along that line, $$\frac{dx}{dt} \bigg\rvert_{y = 0 } = x (1 - \frac{x}{K})$$. Here, $$x$$ is either 0 (which would be an equilibrium point [x=0,y=0]) or positive so we only need to consider the sign of what is in the parentheses. Inside the parentheses, the expression is negative (left direction) when $$x>K$$ and is positive (right arrow) when $$x<K$$. This should make sense: in the absence of $$y$$, $$\frac{dx}{dt}$$ behaves just like a logistic equation and reaches an equilibrium value of $$K$$. We know from the logistic that $$K$$ is a stable equilibrium: any perturbations from it (in only the one-dimensional case, that is), will have $$x$$ bounce back to $$K$$, eventually. The stability of the two-dimensional case need not be stable since perturbations can occur in the y direction. 
+So there are (up to) three equilibria (i.e., up to one internal equilibrium). Each line segment above has either 1) an up or down (red) or 2) a left or right (blue) direction. Looking at the change along each segment can reveal the direction. For example, for the y-isocline $$y=0$$, we can evaluate the instantaneous change of the wellbeing equation at various points along that line, $$\frac{dx}{dt} \bigg\rvert_{y = 0 } = x (1 - \frac{x}{K})$$. Here, $$x$$ is either 0 (which would be an equilibrium point [x=0,y=0]) or positive so we only need to consider the sign of what is in the parentheses. Inside the parentheses, the expression is negative (left direction) when $$x>K$$ and is positive (right arrow) when $$x<K$$. This should make sense: in the absence of $$y$$, $$\frac{dx}{dt}$$ behaves just like a logistic equation and reaches an equilibrium value of $$K$$. We know from the logistic that $$K$$ is a stable equilibrium: any perturbations from it (in only the one-dimensional case, that is), will have $$x$$ bounce back to $$K$$, eventually. The stability of the two-dimensional case need not be stable since perturbations can occur in the y direction.
 
 ### Stablility
-To look at stablility, let's take a look at the Jacobian matrix of this model: 
+To look at stablility, let's take a look at the Jacobian matrix of this model:
 
 $$J(x,y) = \begin{bmatrix}
-\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\ 
+\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\
 \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y}
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
--\frac{2 x}{K} - \frac{\theta y}{(\theta + x)^2} + 1 &  -\frac{x}{\theta + x}\\ 
+-\frac{2 x}{K} - \frac{\theta y}{(\theta + x)^2} + 1 &  -\frac{x}{\theta + x}\\
 \frac{\theta y}{(\theta + x)^2} & \frac{x}{\theta + x} - \frac{1}{4}
 \end{bmatrix}$$.
 
@@ -161,9 +155,9 @@ det <- function(x, y, theta, K){
 ```
 
 
-So for point [x=30, y=0] mentioned above with parameters $$\theta=10$$ and $$K=30$$, $$J(30,0) = 
+So for point [x=30, y=0] mentioned above with parameters $$\theta=10$$ and $$K=30$$, $$J(30,0) =
 \begin{bmatrix}
--1 & -\frac{3}{4} \\ 
+-1 & -\frac{3}{4} \\
 0 & \frac{1}{2}
 \end{bmatrix}$$. The trace of this is negative ($$\beta=-\frac{1}{2}$$) but the determinate is also negative ($$\gamma=-\frac{1}{2}$$); thus, the equalibrium point [30,0] is not stable for this model and for these parameters (it's a saddle).
 
@@ -193,7 +187,7 @@ Can we learn anything else? We can take a look at the eigenvalues to determine i
 
 $$ \lambda_1, \lambda_2 = \frac{\beta \pm \sqrt[]{\beta^2 - 4 \gamma}}{2} $$
 
-Here we can see there _is_ an imaginary part (negative in the square root). So there's evidence of oscillations. 
+Here we can see there _is_ an imaginary part (negative in the square root). So there's evidence of oscillations.
 
 
 
@@ -213,25 +207,25 @@ Let's visualize what happens to one's work/life balance when they start at some 
 plot_df <- function(DF, params){
      require(ggplot2)
      require(dplyr)
-     
+
      x <- seq(from=0, to=max(DF$X*1.5), length.out=200)
      y <- ((parms["K"]-x)*(parms["theta"]+x))/(parms["K"])
      df2 <- data.frame(x=x, y=y) %>% filter(y>=0, x>=0)
-     
-     
-     p <- ggplot(data=DF, aes(x= X, y=Y)) + 
+
+
+     p <- ggplot(data=DF, aes(x= X, y=Y)) +
           geom_path(arrow = arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +
-          theme_light() + 
-          xlab("Wellbeing") + ylab("Work Productivity") + 
-          scale_x_continuous(limits=c(0, max(c(max(1.2*x), max(1.2*DF["X"]))))) + 
+          theme_light() +
+          xlab("Wellbeing") + ylab("Work Productivity") +
+          scale_x_continuous(limits=c(0, max(c(max(1.2*x), max(1.2*DF["X"]))))) +
           scale_y_continuous(limits=c(0, max(c(max(1.2*y), max(1.2*DF["Y"])))))
-     
+
      p <- p + geom_path(data=df2, aes(x=x,y=y), colour="red", linetype="dotdash")
      p <- p + geom_vline(xintercept = 0, colour="red", linetype="dotdash")
-     
+
      p <- p + geom_vline(xintercept = parms["theta"]/3, colour="blue", linetype='dashed')
      p <- p + geom_hline(yintercept = 0, colour="blue", linetype='dashed')
- 
+
      return(p)
 }
 ```
@@ -251,7 +245,7 @@ model <- function(t, y, parms){
 ```
 
 
-Let's take a look at our parameters that we've been working with and start the initial $$x$$,$$y$$ coordinates to [10,10]. 
+Let's take a look at our parameters that we've been working with and start the initial $$x$$,$$y$$ coordinates to [10,10].
 
 ```r
 parms <- c(K = 30, theta=10)
@@ -316,14 +310,14 @@ beta1^2 - 4*gamma1
 ## [1] -0.4722222
 ```
 
-This result is analogous to that zen coworker you know. In this situation, some event occurred that knocked them off their internal equilibrium by decreasing work productivity. Following that event, their wellbeing increased which, in turn, allowed their work productivity to also increase. That increase to some maximum and then there was a back and forth. Importantly, that back and forth is continually dampened until reaching an equilibrium. Keep in mind that actually reaching the equilibrium wasn't the point here. The b_ehavior_ of dampening down work/life towards a steady-state was one of the things I was looking for in a work/life balance model. 
+This result is analogous to that zen coworker you know. In this situation, some event occurred that knocked them off their internal equilibrium by decreasing work productivity. Following that event, their wellbeing increased which, in turn, allowed their work productivity to also increase. That increase to some maximum and then there was a back and forth. Importantly, that back and forth is continually dampened until reaching an equilibrium. Keep in mind that actually reaching the equilibrium wasn't the point here. The b_ehavior_ of dampening down work/life towards a steady-state was one of the things I was looking for in a work/life balance model.
 
 ## A deeper dive
-So how do we get some cases where there are orbits and other cases where there are spiraling back towards an equilibrium? 
+So how do we get some cases where there are orbits and other cases where there are spiraling back towards an equilibrium?
 
 If you look at that x-isocline that curves, you can see a difference between the above two plots above. The y-isocline $$\frac{\theta}{3}$$ is located on the incline of the curve in the first plot but is on the decline of the curve on the second plot. Let's take a deeper look to see if the y-isocline position can tell us the trajectory behavior.
 
-Taking the derivitative of the curved x-isocline we can identify the maximum point. So the x-isocline is: 
+Taking the derivitative of the curved x-isocline we can identify the maximum point. So the x-isocline is:
 
 
 $$y = \frac{(K-x)(\theta + x)}{K}$$
@@ -350,10 +344,6 @@ By now you should now that this is just a model and doesn't necessarily reflect 
 
 How to achieve zen-like work/life balance? From this model, either 1) reducing the set point of your wellbeing (i.e., being happy with less) or 2) reduce the degree to which work pressures affect your wellbeing or 3) a combination of 1 and 2 are key. Those are no small changes and I recommend the reader to work/life balance books for instruction.
 
-Equations weren't necessary to say that happier individuals are more productive, of course. Having good work/life balance depends on 1) the set of things that make one happy and 2) the set of work pressures needed to achieve that wellbeing set-point. Here I tried to model that with the $$K$$ and $$\theta$$ parameters, respectively. This model makes the assumption that wellbeing is a fixed point and irrelevant to work, which might not reflect reality. For example, another model could include two set points ($$K_1$$ and $$K_2$$, perhaps) in which the contributions of work inherently increase wellbeing. This new model may behave more like mutualism models in ecology. That may be a topic for another post. We'll see how long we're in lock-down. 
+Equations weren't necessary to say that happier individuals are more productive, of course. Having good work/life balance depends on 1) the set of things that make one happy and 2) the set of work pressures needed to achieve that wellbeing set-point. Here I tried to model that with the $$K$$ and $$\theta$$ parameters, respectively. This model makes the assumption that wellbeing is a fixed point and irrelevant to work, which might not reflect reality. For example, another model could include two set points ($$K_1$$ and $$K_2$$, perhaps) in which the contributions of work inherently increase wellbeing. This new model may behave more like mutualism models in ecology. That may be a topic for another post. We'll see how long we're in lock-down.
 
 Be safe out there.
-
-
-
-
