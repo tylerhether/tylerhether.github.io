@@ -11,7 +11,7 @@ email: tyler.hether [at] gmail <dot> com
 description: data scientist | family bike and outdoor enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tylerhether.github.io" # the base hostname & protocol for your site
-twitter_username: TylerHether
+twitter_username: live_to_bike
 github_username:  tylerhether
 highlighter: rouge
 
